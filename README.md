@@ -67,7 +67,7 @@ AnaliseTemperaturaPaises/
 - Temperatura Mensal: [ ]
 
 ### Venezuela
-1. Histograma (sem outliers):
+1. Histograma (não contém nenhum outlier):
 ![Histograma Venezuela](resultados/venezuela_histograma.png)
 
 ### Yemen
