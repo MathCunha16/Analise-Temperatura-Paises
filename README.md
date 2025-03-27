@@ -3,7 +3,7 @@
 Este projeto em Python analisa dados de temperatura superficial de diferentes países (Tunisia, Venezuela, Yemen), identificando e tratando outliers nos dados.
 
 ## Autor
-- [MathCunha16](https://github.com/MathCunha16)
+- [Matheus Cunha Prado](https://github.com/MathCunha16)
 
 ## Estrutura do Projeto
 
@@ -64,7 +64,7 @@ AnaliseTemperaturaPaises/
 
 **Outliers Identificados:**
 - Temperatura Diária: [29009.0]
-- Temperatura Mensal: []
+- Temperatura Mensal: [ ]
 
 ### Venezuela
 1. Histograma (sem outliers):
@@ -82,4 +82,4 @@ AnaliseTemperaturaPaises/
 
 **Outliers Identificados:**
 - Temperatura Diária: [22715.0]
-- Temperatura Mensal: [] 
+- Temperatura Mensal: [ ] 
