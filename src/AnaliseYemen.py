@@ -47,9 +47,35 @@ temperatura_mensal_limpa = remover_outliers(coluna_temperatura_mensal)
 # criando um dataframe com os dados limpos
 dados_yemen_limpos = pd.DataFrame({
     "Entity": "Yemen",
+    "Day": dados_yemen["Day"],  # !!! incluindo essa coluna pra usar na proxima parte do codigo !!!!
     "Average surface temperature daily": temperatura_diaria_limpa,
     "Average surface temperature monthly": temperatura_mensal_limpa
 })
 
 # gerando histograma do Yemen sem outliers
 gerar_histogramas("Yemen (Sem Outliers)", dados_yemen_limpos)
+
+# -----------------------------------
+# Parte 2: completamento de dados
+# -----------------------------------
+
+# importando metódo de analisar periodo
+from FuncoesGraficas import analisar_periodo
+
+mes_inicial, mes_final = analisar_periodo(dados_yemen_limpos, "Day")
+
+print("-" * 100)
+
+from FuncoesGraficas import identificar_meses_faltantes # importando função de identificar meses faltantes
+
+identificar_meses_faltantes(dados_yemen_limpos, "Day")
+  
+print("-" * 100)  
+
+from FuncoesGraficas import interpolar_dados # importando função de interpolar dados
+
+dados_yemen_limpos = interpolar_dados(dados_yemen_limpos) 
+
+from FuncoesGraficas import gerar_histogramas_interpolados # importando função de gerar histogramas interpolados
+
+gerar_histogramas_interpolados("Yemen (Com Interpolacao)", dados_yemen_limpos)

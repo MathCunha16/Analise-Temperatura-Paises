@@ -33,3 +33,21 @@ print(f"Mensais: {outliers_mensal.values.tolist()}\n")
 
 # Os outliers apontados não me parecem ser de fato outliers, pois não estão muito longe da media, ent
 # n vou remover eles
+
+# -----------------------------------
+# Parte 2: completamento de dados
+# -----------------------------------
+
+from FuncoesGraficas import analisar_periodo # importando função de analisar periodo
+
+mes_inicial, mes_final = analisar_periodo(dados_venezuela, "Day")
+
+print("-" * 100)
+
+from FuncoesGraficas import identificar_meses_faltantes # importando função de identificar meses faltantes
+
+identificar_meses_faltantes(dados_venezuela, "Day") 
+
+# A venezuela não apresenta meses faltantes, então novamente, não irei realizar nenhum tipo de tratamento de dados
+# também não to tratando o alerta de SettingWithCopyWarning, visto que a professora também não tratou
+
